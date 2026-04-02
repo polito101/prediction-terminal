@@ -1,0 +1,11 @@
+# API Express (monorepo). La web Next.js va en Vercel (ver vercel.json).
+services:
+  - type: web
+    name: prediction-terminal-api
+    runtime: node
+    plan: free
+    region: frankfurt
+    branch: master
+    buildCommand: npm install && npm run build -w @chiri/api
+    startCommand: npm run start -w @chiri/api
+    healthCheckPath: /health

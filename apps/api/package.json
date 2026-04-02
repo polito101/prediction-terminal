@@ -4,7 +4,7 @@
   "private": true,
   "description": "Script inicial para leer mercados activos de Polymarket Gamma API",
   "scripts": {
-    "start": "ts-node src/server.ts",
+    "start": "node dist/server.js",
     "build": "tsc",
     "dev": "ts-node src/server.ts"
   },
