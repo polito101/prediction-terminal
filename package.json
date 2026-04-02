@@ -1,26 +1,16 @@
 {
-  "name": "chiri-terminal-web",
-  "version": "0.1.0",
+  "name": "chiri-terminal-monorepo",
   "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "16.2.2",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.2",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "dev:web": "npm run dev -w @chiri/web",
+    "dev:api": "npm run dev -w @chiri/api",
+    "build": "npm run build -w @chiri/web",
+    "build:web": "npm run build -w @chiri/web",
+    "build:api": "npm run build -w @chiri/api",
+    "start:web": "npm run start -w @chiri/web",
+    "lint": "npm run lint -w @chiri/web"
   }
 }
